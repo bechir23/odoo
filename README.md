@@ -23,11 +23,17 @@ cd ..
 
 ### 3. Clonage d'Odoo 16
 ```bash
-git clone -b 1 https://github.com/odoo/odoo.git odoo-16
+git clone https://github.com/odoo/odoo.git --depth 1 --branch 16.0 odoo-16
 ```
 
 ### 4. Installation des dépendances Python
-Ajoutez à `requirements.txt` :
+- Installez d'abord les dépendances Odoo :
+```bash
+cd odoo-16
+pip install -r requirements.txt
+cd ..
+```
+- Ajoutez à `requirements.txt` (à la racine du projet ou dans custom-addons) :
 ```
 pytesseract>=0.3.8
 pdf2image>=1.16.0
