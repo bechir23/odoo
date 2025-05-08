@@ -1,0 +1,1148 @@
+<odoo>
+    <!-- Etudiants -->
+    <record id="student_john" model="internship.student">
+        <field name="name">John Doe</field>
+        <field name="email">john.doe@example.com</field>
+        <field name="field_of_study">Informatique</field>
+        <field name="level">bachelor</field>
+        <field name="phone">+33600000001</field>
+    </record>
+    <record id="student_jane" model="internship.student">
+        <field name="name">Jane Smith</field>
+        <field name="email">jane.smith@example.com</field>
+        <field name="field_of_study">Gestion</field>
+        <field name="level">master</field>
+        <field name="phone">+33600000002</field>
+    </record>
+    <record id="student_ali" model="internship.student">
+        <field name="name">Ali Benali</field>
+        <field name="email">ali.benali@example.com</field>
+        <field name="field_of_study">Mathématiques</field>
+        <field name="level">bachelor</field>
+        <field name="phone">+33600000003</field>
+    </record>
+    <record id="student_sara" model="internship.student">
+        <field name="name">Sara Lopez</field>
+        <field name="email">sara.lopez@example.com</field>
+        <field name="field_of_study">Biologie</field>
+        <field name="level">bachelor</field>
+        <field name="phone">+33600000004</field>
+    </record>
+    <!-- Ajout de 26 étudiants supplémentaires -->
+    <record id="student_theo" model="internship.student">
+        <field name="name">Théo Dubois</field>
+        <field name="email">theo.dubois@example.com</field>
+        <field name="field_of_study">Informatique</field>
+        <field name="level">master</field>
+        <field name="phone">+33600000005</field>
+    </record>
+    <record id="student_lea" model="internship.student">
+        <field name="name">Léa Petit</field>
+        <field name="email">lea.petit@example.com</field>
+        <field name="field_of_study">Marketing</field>
+        <field name="level">bachelor</field>
+        <field name="phone">+33600000006</field>
+    </record>
+    <record id="student_hugo" model="internship.student">
+        <field name="name">Hugo Moreau</field>
+        <field name="email">hugo.moreau@example.com</field>
+        <field name="field_of_study">Droit</field>
+        <field name="level">master</field>
+        <field name="phone">+33600000007</field>
+    </record>
+    <record id="student_chloe" model="internship.student">
+        <field name="name">Chloé Laurent</field>
+        <field name="email">chloe.laurent@example.com</field>
+        <field name="field_of_study">Communication</field>
+        <field name="level">bachelor</field>
+        <field name="phone">+33600000008</field>
+    </record>
+    <record id="student_louis" model="internship.student">
+        <field name="name">Louis Simon</field>
+        <field name="email">louis.simon@example.com</field>
+        <field name="field_of_study">Physique</field>
+        <field name="level">phd</field>
+        <field name="phone">+33600000009</field>
+    </record>
+    <record id="student_manon" model="internship.student">
+        <field name="name">Manon Michel</field>
+        <field name="email">manon.michel@example.com</field>
+        <field name="field_of_study">Chimie</field>
+        <field name="level">master</field>
+        <field name="phone">+33600000010</field>
+    </record>
+    <record id="student_arthur" model="internship.student">
+        <field name="name">Arthur Garcia</field>
+        <field name="email">arthur.garcia@example.com</field>
+        <field name="field_of_study">Histoire</field>
+        <field name="level">bachelor</field>
+        <field name="phone">+33600000011</field>
+    </record>
+    <record id="student_camille" model="internship.student">
+        <field name="name">Camille Lefevre</field>
+        <field name="email">camille.lefevre@example.com</field>
+        <field name="field_of_study">Langues</field>
+        <field name="level">master</field>
+        <field name="phone">+33600000012</field>
+    </record>
+    <record id="student_jules" model="internship.student">
+        <field name="name">Jules Roux</field>
+        <field name="email">jules.roux@example.com</field>
+        <field name="field_of_study">Économie</field>
+        <field name="level">bachelor</field>
+        <field name="phone">+33600000013</field>
+    </record>
+    <record id="student_emma" model="internship.student">
+        <field name="name">Emma David</field>
+        <field name="email">emma.david@example.com</field>
+        <field name="field_of_study">Sociologie</field>
+        <field name="level">master</field>
+        <field name="phone">+33600000014</field>
+    </record>
+    <record id="student_gabriel" model="internship.student">
+        <field name="name">Gabriel Bertrand</field>
+        <field name="email">gabriel.bertrand@example.com</field>
+        <field name="field_of_study">Philosophie</field>
+        <field name="level">phd</field>
+        <field name="phone">+33600000015</field>
+    </record>
+    <record id="student_alice" model="internship.student">
+        <field name="name">Alice Moreau</field>
+        <field name="email">alice.moreau@example.com</field>
+        <field name="field_of_study">Arts</field>
+        <field name="level">bachelor</field>
+        <field name="phone">+33600000016</field>
+    </record>
+    <record id="student_adam" model="internship.student">
+        <field name="name">Adam Fournier</field>
+        <field name="email">adam.fournier@example.com</field>
+        <field name="field_of_study">Musique</field>
+        <field name="level">master</field>
+        <field name="phone">+33600000017</field>
+    </record>
+    <record id="student_rose" model="internship.student">
+        <field name="name">Rose Girard</field>
+        <field name="email">rose.girard@example.com</field>
+        <field name="field_of_study">Design</field>
+        <field name="level">bachelor</field>
+        <field name="phone">+33600000018</field>
+    </record>
+    <record id="student_paul" model="internship.student">
+        <field name="name">Paul Bonnet</field>
+        <field name="email">paul.bonnet@example.com</field>
+        <field name="field_of_study">Architecture</field>
+        <field name="level">master</field>
+        <field name="phone">+33600000019</field>
+    </record>
+    <record id="student_lina" model="internship.student">
+        <field name="name">Lina Dupont</field>
+        <field name="email">lina.dupont@example.com</field>
+        <field name="field_of_study">Journalisme</field>
+        <field name="level">bachelor</field>
+        <field name="phone">+33600000020</field>
+    </record>
+    <record id="student_nathan" model="internship.student">
+        <field name="name">Nathan Lambert</field>
+        <field name="email">nathan.lambert@example.com</field>
+        <field name="field_of_study">Sport</field>
+        <field name="level">master</field>
+        <field name="phone">+33600000021</field>
+    </record>
+    <record id="student_zoe" model="internship.student">
+        <field name="name">Zoé Francois</field>
+        <field name="email">zoe.francois@example.com</field>
+        <field name="field_of_study">Tourisme</field>
+        <field name="level">bachelor</field>
+        <field name="phone">+33600000022</field>
+    </record>
+    <record id="student_victor" model="internship.student">
+        <field name="name">Victor Mercier</field>
+        <field name="email">victor.mercier@example.com</field>
+        <field name="field_of_study">Hôtellerie</field>
+        <field name="level">master</field>
+        <field name="phone">+33600000023</field>
+    </record>
+    <record id="student_eva" model="internship.student">
+        <field name="name">Eva Roussel</field>
+        <field name="email">eva.roussel@example.com</field>
+        <field name="field_of_study">Restauration</field>
+        <field name="level">bachelor</field>
+        <field name="phone">+33600000024</field>
+    </record>
+    <record id="student_raphael" model="internship.student">
+        <field name="name">Raphaël Henry</field>
+        <field name="email">raphael.henry@example.com</field>
+        <field name="field_of_study">Médecine</field>
+        <field name="level">phd</field>
+        <field name="phone">+33600000025</field>
+    </record>
+    <record id="student_ambre" model="internship.student">
+        <field name="name">Ambre Nicolas</field>
+        <field name="email">ambre.nicolas@example.com</field>
+        <field name="field_of_study">Pharmacie</field>
+        <field name="level">master</field>
+        <field name="phone">+33600000026</field>
+    </record>
+    <record id="student_samuel" model="internship.student">
+        <field name="name">Samuel Morin</field>
+        <field name="email">samuel.morin@example.com</field>
+        <field name="field_of_study">Ingénierie</field>
+        <field name="level">bachelor</field>
+        <field name="phone">+33600000027</field>
+    </record>
+    <record id="student_clara" model="internship.student">
+        <field name="name">Clara Mathieu</field>
+        <field name="email">clara.mathieu@example.com</field>
+        <field name="field_of_study">Sciences Politiques</field>
+        <field name="level">master</field>
+        <field name="phone">+33600000028</field>
+    </record>
+    <record id="student_maxime" model="internship.student">
+        <field name="name">Maxime Durand</field>
+        <field name="email">maxime.durand@example.com</field>
+        <field name="field_of_study">Géographie</field>
+        <field name="level">bachelor</field>
+        <field name="phone">+33600000029</field>
+    </record>
+    <record id="student_julia" model="internship.student">
+        <field name="name">Julia Lefebvre</field>
+        <field name="email">julia.lefebvre@example.com</field>
+        <field name="field_of_study">Psychologie</field>
+        <field name="level">master</field>
+        <field name="phone">+33600000030</field>
+    </record>
+
+    <!-- Entreprises -->
+    <record id="company_acme" model="internship.company">
+        <field name="name">ACME Corp</field>
+        <field name="contact_person">contact@acme.com</field>
+        <field name="industry">Technology</field>
+        <field name="address">1 Infinite Loop, Paris</field>
+        <field name="website">https://acme.com</field>
+        <field name="phone">+33100000000</field>
+        <field name="email">acme@acme.com</field>
+        <field name="contact_email">contact@acme.com</field>
+        <field name="contact_phone">+33100000000</field>
+        <field name="active">True</field>
+    </record>
+    <record id="company_beta" model="internship.company">
+        <field name="name">Beta Solutions</field>
+        <field name="contact_person">hr@beta.com</field>
+        <field name="industry">Finance</field>
+        <field name="address">10 avenue des Champs, Lyon</field>
+        <field name="website">https://beta.com</field>
+        <field name="phone">+33456781234</field>
+    </record>
+    <record id="company_zen" model="internship.company">
+        <field name="name">ZenBio</field>
+        <field name="contact_person">zen@zenbio.com</field>
+        <field name="industry">Biotech</field>
+        <field name="address">5 rue Pasteur, Marseille</field>
+        <field name="website">https://zenbio.com</field>
+        <field name="phone">+33412349876</field>
+    </record>
+    <record id="company_omni" model="internship.company">
+        <field name="name">OmniData</field>
+        <field name="contact_person">info@omnidata.com</field>
+        <field name="industry">Data Science</field>
+        <field name="address">99 boulevard Data, Lille</field>
+        <field name="website">https://omnidata.com</field>
+        <field name="phone">+33398765432</field>
+    </record>
+    <!-- Ajout de 26 entreprises supplémentaires -->
+    <record id="company_innov" model="internship.company">
+        <field name="name">Innovatech</field>
+        <field name="contact_person">contact@innovatech.com</field>
+        <field name="industry">Tech</field>
+        <field name="address">2 avenue de l'Innovation, Toulouse</field>
+        <field name="website">https://innovatech.com</field>
+        <field name="phone">+33500000001</field>
+    </record>
+    <record id="company_consult" model="internship.company">
+        <field name="name">ConsultPlus</field>
+        <field name="contact_person">info@consultplus.com</field>
+        <field name="industry">Consulting</field>
+        <field name="address">3 place du Conseil, Bordeaux</field>
+        <field name="website">https://consultplus.com</field>
+        <field name="phone">+33500000002</field>
+    </record>
+    <record id="company_market" model="internship.company">
+        <field name="name">MarketBoost</field>
+        <field name="contact_person">contact@marketboost.com</field>
+        <field name="industry">Marketing</field>
+        <field name="address">4 rue de la Pub, Nantes</field>
+        <field name="website">https://marketboost.com</field>
+        <field name="phone">+33200000003</field>
+    </record>
+    <record id="company_legal" model="internship.company">
+        <field name="name">LegalForce</field>
+        <field name="contact_person">info@legalforce.com</field>
+        <field name="industry">Law</field>
+        <field name="address">5 avenue du Droit, Strasbourg</field>
+        <field name="website">https://legalforce.com</field>
+        <field name="phone">+33300000004</field>
+    </record>
+    <record id="company_comms" model="internship.company">
+        <field name="name">CommsHub</field>
+        <field name="contact_person">contact@commshub.com</field>
+        <field name="industry">Communication</field>
+        <field name="address">6 boulevard des Médias, Rennes</field>
+        <field name="website">https://commshub.com</field>
+        <field name="phone">+33200000005</field>
+    </record>
+    <record id="company_physio" model="internship.company">
+        <field name="name">PhysioLab</field>
+        <field name="contact_person">info@physiolab.com</field>
+        <field name="industry">Research</field>
+        <field name="address">7 rue de la Science, Montpellier</field>
+        <field name="website">https://physiolab.com</field>
+        <field name="phone">+33400000006</field>
+    </record>
+    <record id="company_chemlab" model="internship.company">
+        <field name="name">ChemSolutions</field>
+        <field name="contact_person">contact@chemsolutions.com</field>
+        <field name="industry">Chemical</field>
+        <field name="address">8 avenue des Molécules, Grenoble</field>
+        <field name="website">https://chemsolutions.com</field>
+        <field name="phone">+33400000007</field>
+    </record>
+    <record id="company_historia" model="internship.company">
+        <field name="name">Historia Archives</field>
+        <field name="contact_person">info@historia.com</field>
+        <field name="industry">Culture</field>
+        <field name="address">9 rue du Passé, Nice</field>
+        <field name="website">https://historia.com</field>
+        <field name="phone">+33400000008</field>
+    </record>
+    <record id="company_lingua" model="internship.company">
+        <field name="name">LinguaWorld</field>
+        <field name="contact_person">contact@linguaworld.com</field>
+        <field name="industry">Education</field>
+        <field name="address">10 boulevard des Langues, Angers</field>
+        <field name="website">https://linguaworld.com</field>
+        <field name="phone">+33200000009</field>
+    </record>
+    <record id="company_econo" model="internship.company">
+        <field name="name">EconoMetrics</field>
+        <field name="contact_person">info@econometrics.com</field>
+        <field name="industry">Finance</field>
+        <field name="address">11 place de la Bourse, Reims</field>
+        <field name="website">https://econometrics.com</field>
+        <field name="phone">+33300000010</field>
+    </record>
+    <record id="company_socio" model="internship.company">
+        <field name="name">SocioSphere</field>
+        <field name="contact_person">contact@sociosphere.com</field>
+        <field name="industry">Social</field>
+        <field name="address">12 rue de la Communauté, Le Havre</field>
+        <field name="website">https://sociosphere.com</field>
+        <field name="phone">+33200000011</field>
+    </record>
+    <record id="company_philo" model="internship.company">
+        <field name="name">PhiloThink</field>
+        <field name="contact_person">info@philothink.com</field>
+        <field name="industry">Education</field>
+        <field name="address">13 avenue des Idées, Saint-Étienne</field>
+        <field name="website">https://philothink.com</field>
+        <field name="phone">+33400000012</field>
+    </record>
+    <record id="company_artify" model="internship.company">
+        <field name="name">Artify Studios</field>
+        <field name="contact_person">contact@artifystudios.com</field>
+        <field name="industry">Creative</field>
+        <field name="address">14 rue de la Création, Toulon</field>
+        <field name="website">https://artifystudios.com</field>
+        <field name="phone">+33400000013</field>
+    </record>
+    <record id="company_musica" model="internship.company">
+        <field name="name">Musica Harmonia</field>
+        <field name="contact_person">info@musicaharmonia.com</field>
+        <field name="industry">Entertainment</field>
+        <field name="address">15 place de la Musique, Dijon</field>
+        <field name="website">https://musicaharmonia.com</field>
+        <field name="phone">+33300000014</field>
+    </record>
+    <record id="company_designo" model="internship.company">
+        <field name="name">DesignoGraph</field>
+        <field name="contact_person">contact@designograph.com</field>
+        <field name="industry">Design</field>
+        <field name="address">16 avenue du Style, Nîmes</field>
+        <field name="website">https://designograph.com</field>
+        <field name="phone">+33400000015</field>
+    </record>
+    <record id="company_architek" model="internship.company">
+        <field name="name">ArchitekBuild</field>
+        <field name="contact_person">info@architekbuild.com</field>
+        <field name="industry">Construction</field>
+        <field name="address">17 rue des Plans, Clermont-Ferrand</field>
+        <field name="website">https://architekbuild.com</field>
+        <field name="phone">+33400000016</field>
+    </record>
+    <record id="company_journo" model="internship.company">
+        <field name="name">JournoPress</field>
+        <field name="contact_person">contact@journopress.com</field>
+        <field name="industry">Media</field>
+        <field name="address">18 boulevard de l'Info, Aix-en-Provence</field>
+        <field name="website">https://journopress.com</field>
+        <field name="phone">+33400000017</field>
+    </record>
+    <record id="company_sportex" model="internship.company">
+        <field name="name">Sportex Global</field>
+        <field name="contact_person">info@sportexglobal.com</field>
+        <field name="industry">Sports</field>
+        <field name="address">19 rue des Champions, Brest</field>
+        <field name="website">https://sportexglobal.com</field>
+        <field name="phone">+33200000018</field>
+    </record>
+    <record id="company_travelia" model="internship.company">
+        <field name="name">Travelia Voyages</field>
+        <field name="contact_person">contact@traveliavoyages.com</field>
+        <field name="industry">Tourism</field>
+        <field name="address">20 avenue des Découvertes, Limoges</field>
+        <field name="website">https://traveliavoyages.com</field>
+        <field name="phone">+33500000019</field>
+    </record>
+    <record id="company_hospita" model="internship.company">
+        <field name="name">HospitaPlus</field>
+        <field name="contact_person">info@hospitaplus.com</field>
+        <field name="industry">Healthcare</field>
+        <field name="address">21 rue de la Santé, Amiens</field>
+        <field name="website">https://hospitaplus.com</field>
+        <field name="phone">+33300000020</field>
+    </record>
+    <record id="company_foodie" model="internship.company">
+        <field name="name">Foodie Delights</field>
+        <field name="contact_person">contact@foodiedelights.com</field>
+        <field name="industry">Food</field>
+        <field name="address">22 place des Saveurs, Tours</field>
+        <field name="website">https://foodiedelights.com</field>
+        <field name="phone">+33200000021</field>
+    </record>
+    <record id="company_medica" model="internship.company">
+        <field name="name">MedicaCare</field>
+        <field name="contact_person">info@medicacare.com</field>
+        <field name="industry">Healthcare</field>
+        <field name="address">23 avenue des Soins, Perpignan</field>
+        <field name="website">https://medicacare.com</field>
+        <field name="phone">+33400000022</field>
+    </record>
+    <record id="company_pharma" model="internship.company">
+        <field name="name">PharmaWell</field>
+        <field name="contact_person">contact@pharmawell.com</field>
+        <field name="industry">Pharmaceutical</field>
+        <field name="address">24 rue des Remèdes, Besançon</field>
+        <field name="website">https://pharmawell.com</field>
+        <field name="phone">+33300000023</field>
+    </record>
+    <record id="company_engine" model="internship.company">
+        <field name="name">EnginePro</field>
+        <field name="contact_person">info@enginepro.com</field>
+        <field name="industry">Engineering</field>
+        <field name="address">25 boulevard de la Technique, Orléans</field>
+        <field name="website">https://enginepro.com</field>
+        <field name="phone">+33200000024</field>
+    </record>
+    <record id="company_politic" model="internship.company">
+        <field name="name">PoliticSphere</field>
+        <field name="contact_person">contact@politicsphere.com</field>
+        <field name="industry">Government</field>
+        <field name="address">26 rue de la Démocratie, Metz</field>
+        <field name="website">https://politicsphere.com</field>
+        <field name="phone">+33500000025</field>
+    </record>
+    <record id="company_geograph" model="internship.company">
+        <field name="name">GeoWorld</field>
+        <field name="contact_person">info@geoworld.com</field>
+        <field name="industry">Geography</field>
+        <field name="address">27 avenue des Cartes, Rouen</field>
+        <field name="website">https://geoworld.com</field>
+        <field name="phone">+33500000026</field>
+    </record>
+    <record id="company_psycho" model="internship.company">
+        <field name="name">PsychoCare</field>
+        <field name="contact_person">contact@psychocare.com</field>
+        <field name="industry">Healthcare</field>
+        <field name="address">28 rue de l'Esprit, Mulhouse</field>
+        <field name="website">https://psychocare.com</field>
+        <field name="phone">+33500000027</field>
+    </record>
+
+    <!-- Stages -->
+    <record id="internship_john" model="internship.internship">
+        <field name="name">Web Application Internship</field>
+        <field name="student_id" ref="student_john"/>
+        <field name="company_id" ref="company_acme"/>
+        <field name="academic_tutor">tuteur.acad@univ.fr</field>
+        <field name="professional_tutor">pro.tuteur@acme.com</field>
+        <field name="status">ongoing</field>
+        <field name="start_date">2025-03-01</field>
+        <field name="end_date">2025-06-30</field>
+        <field name="subject">Développement d'une application web</field>
+        <field name="description">Développement d'une plateforme de gestion de stages en Python/Odoo.</field>
+    </record>
+    <record id="internship_jane" model="internship.internship">
+        <field name="name">Financial Analysis Internship</field>
+        <field name="student_id" ref="student_jane"/>
+        <field name="company_id" ref="company_beta"/>
+        <field name="academic_tutor">tuteur.acad2@univ.fr</field>
+        <field name="professional_tutor">pro.tuteur@beta.com</field>
+        <field name="status">pending</field>
+        <field name="start_date">2025-04-15</field>
+        <field name="end_date">2025-08-15</field>
+        <field name="subject">Analyse financière</field>
+        <field name="description">Analyse des flux financiers et reporting pour Beta Solutions.</field>
+    </record>
+    <record id="internship_ali" model="internship.internship">
+        <field name="name">Mathematical Modeling Internship</field>
+        <field name="student_id" ref="student_ali"/>
+        <field name="company_id" ref="company_zen"/>
+        <field name="academic_tutor">prof.math@univ.fr</field>
+        <field name="professional_tutor">dr.bio@zenbio.com</field>
+        <field name="status">completed</field>
+        <field name="start_date">2024-09-01</field>
+        <field name="end_date">2025-01-31</field>
+        <field name="subject">Modélisation mathématique</field>
+        <field name="description">Recherche sur la modélisation mathématique en biotechnologie.</field>
+    </record>
+    <record id="internship_sara" model="internship.internship">
+        <field name="name">Applied Data Science Internship</field>
+        <field name="student_id" ref="student_sara"/>
+        <field name="company_id" ref="company_omni"/>
+        <field name="academic_tutor">tuteur.bio@univ.fr</field>
+        <field name="professional_tutor">data.tuteur@omnidata.com</field>
+        <field name="status">ongoing</field>
+        <field name="start_date">2025-02-10</field>
+        <field name="end_date">2025-07-10</field>
+        <field name="subject">Data Science appliquée</field>
+        <field name="description">Projet de data science sur l'analyse de données biologiques.</field>
+    </record>
+    <!-- Ajout de 26 stages supplémentaires -->
+    <record id="internship_theo_innov" model="internship.internship">
+        <field name="name">AI Development Internship</field>
+        <field name="student_id" ref="student_theo"/>
+        <field name="company_id" ref="company_innov"/>
+        <field name="academic_tutor">prof.info@univ-tlse.fr</field>
+        <field name="professional_tutor">rh@innovatech.com</field>
+        <field name="status">pending</field>
+        <field name="start_date">2025-05-01</field>
+        <field name="end_date">2025-09-30</field>
+        <field name="subject">Développement IA</field>
+        <field name="description">Projet de développement d'un agent conversationnel.</field>
+    </record>
+    <record id="internship_lea_market" model="internship.internship">
+        <field name="name">Digital Strategy Internship</field>
+        <field name="student_id" ref="student_lea"/>
+        <field name="company_id" ref="company_market"/>
+        <field name="academic_tutor">prof.marketing@univ-nt.fr</field>
+        <field name="professional_tutor">manager@marketboost.com</field>
+        <field name="status">ongoing</field>
+        <field name="start_date">2025-03-15</field>
+        <field name="end_date">2025-07-15</field>
+        <field name="subject">Stratégie digitale</field>
+        <field name="description">Élaboration d'une stratégie de contenu pour les réseaux sociaux.</field>
+    </record>
+    <record id="internship_hugo_legal" model="internship.internship">
+        <field name="name">Business Law Internship</field>
+        <field name="student_id" ref="student_hugo"/>
+        <field name="company_id" ref="company_legal"/>
+        <field name="academic_tutor">prof.droit@univ-stras.fr</field>
+        <field name="professional_tutor">associe@legalforce.com</field>
+        <field name="status">completed</field>
+        <field name="start_date">2024-10-01</field>
+        <field name="end_date">2025-02-28</field>
+        <field name="subject">Droit des affaires</field>
+        <field name="description">Recherche jurisprudentielle et rédaction d'actes.</field>
+    </record>
+    <record id="internship_chloe_comms" model="internship.internship">
+        <field name="name">Press Relations Internship</field>
+        <field name="student_id" ref="student_chloe"/>
+        <field name="company_id" ref="company_comms"/>
+        <field name="academic_tutor">prof.com@univ-rennes.fr</field>
+        <field name="professional_tutor">dircom@commshub.com</field>
+        <field name="status">pending</field>
+        <field name="start_date">2025-06-01</field>
+        <field name="end_date">2025-10-31</field>
+        <field name="subject">Relations presse</field>
+        <field name="description">Organisation d'événements et gestion des relations avec les médias.</field>
+    </record>
+    <record id="internship_louis_physio" model="internship.internship">
+        <field name="name">Fundamental Research Internship</field>
+        <field name="student_id" ref="student_louis"/>
+        <field name="company_id" ref="company_physio"/>
+        <field name="academic_tutor">dr.phys@univ-montp.fr</field>
+        <field name="professional_tutor">chercheur@physiolab.com</field>
+        <field name="status">ongoing</field>
+        <field name="start_date">2025-01-10</field>
+        <field name="end_date">2025-07-10</field>
+        <field name="subject">Recherche fondamentale</field>
+        <field name="description">Expérimentations en laboratoire sur la physique des particules.</field>
+    </record>
+    <record id="internship_manon_chemlab" model="internship.internship">
+        <field name="name">Organic Chemistry Internship</field>
+        <field name="student_id" ref="student_manon"/>
+        <field name="company_id" ref="company_chemlab"/>
+        <field name="academic_tutor">prof.chimie@univ-grenoble.fr</field>
+        <field name="professional_tutor">labo@chemsolutions.com</field>
+        <field name="status">completed</field>
+        <field name="start_date">2024-08-01</field>
+        <field name="end_date">2025-01-31</field>
+        <field name="subject">Chimie organique</field>
+        <field name="description">Synthèse de nouvelles molécules et analyse de leurs propriétés.</field>
+    </record>
+    <record id="internship_arthur_historia" model="internship.internship">
+        <field name="name">Archival Internship</field>
+        <field name="student_id" ref="student_arthur"/>
+        <field name="company_id" ref="company_historia"/>
+        <field name="academic_tutor">prof.hist@univ-nice.fr</field>
+        <field name="professional_tutor">archiviste@historia.com</field>
+        <field name="status">pending</field>
+        <field name="start_date">2025-07-01</field>
+        <field name="end_date">2025-12-31</field>
+        <field name="subject">Archivistique</field>
+        <field name="description">Classement et numérisation de documents historiques.</field>
+    </record>
+    <record id="internship_camille_lingua" model="internship.internship">
+        <field name="name">Specialized Translation Internship</field>
+        <field name="student_id" ref="student_camille"/>
+        <field name="company_id" ref="company_lingua"/>
+        <field name="academic_tutor">prof.langues@univ-angers.fr</field>
+        <field name="professional_tutor">pedago@linguaworld.com</field>
+        <field name="status">ongoing</field>
+        <field name="start_date">2025-02-15</field>
+        <field name="end_date">2025-06-15</field>
+        <field name="subject">Traduction spécialisée</field>
+        <field name="description">Traduction de documents techniques anglais-français.</field>
+    </record>
+    <record id="internship_jules_econo" model="internship.internship">
+        <field name="name">Market Analysis Internship</field>
+        <field name="student_id" ref="student_jules"/>
+        <field name="company_id" ref="company_econo"/>
+        <field name="academic_tutor">prof.eco@univ-reims.fr</field>
+        <field name="professional_tutor">analyste@econometrics.com</field>
+        <field name="status">completed</field>
+        <field name="start_date">2024-11-01</field>
+        <field name="end_date">2025-03-31</field>
+        <field name="subject">Analyse de marché</field>
+        <field name="description">Étude de l'impact des taux d'intérêt sur les PME.</field>
+    </record>
+    <record id="internship_emma_socio" model="internship.internship">
+        <field name="name">Social Survey Internship</field>
+        <field name="student_id" ref="student_emma"/>
+        <field name="company_id" ref="company_socio"/>
+        <field name="academic_tutor">prof.socio@univ-lehavre.fr</field>
+        <field name="professional_tutor">charge-etude@sociosphere.com</field>
+        <field name="status">pending</field>
+        <field name="start_date">2025-08-01</field>
+        <field name="end_date">2026-01-31</field>
+        <field name="subject">Enquête sociale</field>
+        <field name="description">Réalisation d'une enquête sur les conditions de vie étudiante.</field>
+    </record>
+    <record id="internship_gabriel_philo" model="internship.internship">
+        <field name="name">Ethics and AI Internship</field>
+        <field name="student_id" ref="student_gabriel"/>
+        <field name="company_id" ref="company_philo"/>
+        <field name="academic_tutor">dr.philo@univ-stetienne.fr</field>
+        <field name="professional_tutor">editeur@philothink.com</field>
+        <field name="status">ongoing</field>
+        <field name="start_date">2025-04-01</field>
+        <field name="end_date">2025-10-01</field>
+        <field name="subject">Éthique et IA</field>
+        <field name="description">Recherche sur les implications éthiques de l'intelligence artificielle.</field>
+    </record>
+    <record id="internship_alice_artify" model="internship.internship">
+        <field name="name">Graphic Design Internship</field>
+        <field name="student_id" ref="student_alice"/>
+        <field name="company_id" ref="company_artify"/>
+        <field name="academic_tutor">prof.art@univ-toulon.fr</field>
+        <field name="professional_tutor">directeur.artistique@artifystudios.com</field>
+        <field name="status">completed</field>
+        <field name="start_date">2024-07-01</field>
+        <field name="end_date">2024-12-31</field>
+        <field name="subject">Création graphique</field>
+        <field name="description">Conception d'identités visuelles pour des clients.</field>
+    </record>
+    <record id="internship_adam_musica" model="internship.internship">
+        <field name="name">Music Production Internship</field>
+        <field name="student_id" ref="student_adam"/>
+        <field name="company_id" ref="company_musica"/>
+        <field name="academic_tutor">prof.musique@univ-dijon.fr</field>
+        <field name="professional_tutor">producteur@musicaharmonia.com</field>
+        <field name="status">pending</field>
+        <field name="start_date">2025-09-01</field>
+        <field name="end_date">2026-02-28</field>
+        <field name="subject">Production musicale</field>
+        <field name="description">Assistance à la production d'un album.</field>
+    </record>
+    <record id="internship_rose_designo" model="internship.internship">
+        <field name="name">UI/UX Design Internship</field>
+        <field name="student_id" ref="student_rose"/>
+        <field name="company_id" ref="company_designo"/>
+        <field name="academic_tutor">prof.design@univ-nimes.fr</field>
+        <field name="professional_tutor">designer.senior@designograph.com</field>
+        <field name="status">ongoing</field>
+        <field name="start_date">2025-01-20</field>
+        <field name="end_date">2025-05-20</field>
+        <field name="subject">Design UI/UX</field>
+        <field name="description">Conception de maquettes pour une application mobile.</field>
+    </record>
+    <record id="internship_paul_architek" model="internship.internship">
+        <field name="name">Architectural Design Internship</field>
+        <field name="student_id" ref="student_paul"/>
+        <field name="company_id" ref="company_architek"/>
+        <field name="academic_tutor">prof.archi@univ-clermont.fr</field>
+        <field name="professional_tutor">architecte.associe@architekbuild.com</field>
+        <field name="status">completed</field>
+        <field name="start_date">2024-06-01</field>
+        <field name="end_date">2024-11-30</field>
+        <field name="subject">Conception architecturale</field>
+        <field name="description">Participation à la conception d'un bâtiment public.</field>
+    </record>
+    <record id="internship_lina_journo" model="internship.internship">
+        <field name="name">Investigative Journalism Internship</field>
+        <field name="student_id" ref="student_lina"/>
+        <field name="company_id" ref="company_journo"/>
+        <field name="academic_tutor">prof.journal@univ-aix.fr</field>
+        <field name="professional_tutor">redacteur.chef@journopress.com</field>
+        <field name="status">pending</field>
+        <field name="start_date">2025-10-01</field>
+        <field name="end_date">2026-03-31</field>
+        <field name="subject">Journalisme d'investigation</field>
+        <field name="description">Enquête sur un sujet d'actualité locale.</field>
+    </record>
+    <record id="internship_nathan_sportex" model="internship.internship">
+        <field name="name">Sports Event Management Internship</field>
+        <field name="student_id" ref="student_nathan"/>
+        <field name="company_id" ref="company_sportex"/>
+        <field name="academic_tutor">prof.sport@univ-brest.fr</field>
+        <field name="professional_tutor">manager.event@sportexglobal.com</field>
+        <field name="status">ongoing</field>
+        <field name="start_date">2025-03-01</field>
+        <field name="end_date">2025-08-31</field>
+        <field name="subject">Événementiel sportif</field>
+        <field name="description">Organisation d'un tournoi sportif international.</field>
+    </record>
+    <record id="internship_zoe_travelia" model="internship.internship">
+        <field name="name">Travel Design Internship</field>
+        <field name="student_id" ref="student_zoe"/>
+        <field name="company_id" ref="company_travelia"/>
+        <field name="academic_tutor">prof.tourisme@univ-limoges.fr</field>
+        <field name="professional_tutor">chef.produit@traveliavoyages.com</field>
+        <field name="status">completed</field>
+        <field name="start_date">2024-05-01</field>
+        <field name="end_date">2024-10-31</field>
+        <field name="subject">Conception de voyages</field>
+        <field name="description">Création de nouveaux circuits touristiques en Europe.</field>
+    </record>
+    <record id="internship_victor_hospita" model="internship.internship">
+        <field name="name">Hotel Management Internship</field>
+        <field name="student_id" ref="student_victor"/>
+        <field name="company_id" ref="company_hospita"/>
+        <field name="academic_tutor">prof.hotellerie@univ-amiens.fr</field>
+        <field name="professional_tutor">directeur.hotel@hospitaplus.com</field>
+        <field name="status">pending</field>
+        <field name="start_date">2025-11-01</field>
+        <field name="end_date">2026-04-30</field>
+        <field name="subject">Management hôtelier</field>
+        <field name="description">Assistance à la direction d'un établissement hôtelier.</field>
+    </record>
+    <record id="internship_eva_foodie" model="internship.internship">
+        <field name="name">Culinary Creation Internship</field>
+        <field name="student_id" ref="student_eva"/>
+        <field name="company_id" ref="company_foodie"/>
+        <field name="academic_tutor">prof.restauration@univ-tours.fr</field>
+        <field name="professional_tutor">chef.cuisine@foodiedelights.com</field>
+        <field name="status">ongoing</field>
+        <field name="start_date">2025-04-10</field>
+        <field name="end_date">2025-09-10</field>
+        <field name="subject">Création culinaire</field>
+        <field name="description">Développement de nouvelles recettes pour un restaurant gastronomique.</field>
+    </record>
+    <record id="internship_raphael_medica" model="internship.internship">
+        <field name="name">Clinical Research Internship</field>
+        <field name="student_id" ref="student_raphael"/>
+        <field name="company_id" ref="company_medica"/>
+        <field name="academic_tutor">dr.med@univ-perpignan.fr</field>
+        <field name="professional_tutor">medecin.chef@medicacare.com</field>
+        <field name="status">completed</field>
+        <field name="start_date">2024-03-01</field>
+        <field name="end_date">2024-08-31</field>
+        <field name="subject">Recherche clinique</field>
+        <field name="description">Participation à une étude clinique sur un nouveau traitement.</field>
+    </record>
+    <record id="internship_ambre_pharma" model="internship.internship">
+        <field name="name">Pharmacovigilance Internship</field>
+        <field name="student_id" ref="student_ambre"/>
+        <field name="company_id" ref="company_pharma"/>
+        <field name="academic_tutor">prof.pharma@univ-besancon.fr</field>
+        <field name="professional_tutor">pharmacien.resp@pharmawell.com</field>
+        <field name="status">pending</field>
+        <field name="start_date">2025-12-01</field>
+        <field name="end_date">2026-05-31</field>
+        <field name="subject">Pharmacovigilance</field>
+        <field name="description">Suivi des effets secondaires des médicaments.</field>
+    </record>
+    <record id="internship_samuel_engine" model="internship.internship">
+        <field name="name">Mechanical Design Internship</field>
+        <field name="subject">Conception mécanique</field>
+        <field name="description">Développement de pièces pour l'industrie automobile.</field>
+    </record>
+    <record id="internship_clara_politic" model="internship.internship">
+        <field name="name">Political Analysis Internship</field>
+        <field name="student_id" ref="student_john"/>
+        <field name="company_id" ref="company_politic"/>
+        <field name="academic_tutor">prof.scpo@univ-metz.fr</field>
+        <field name="professional_tutor">conseiller.politique@politicsphere.com</field>
+        <field name="status">completed</field>
+        <field name="start_date">2024-01-15</field>
+        <field name="end_date">2024-06-15</field>
+        <field name="subject">Analyse politique</field>
+        <field name="description">Rédaction de notes d'analyse sur les politiques publiques.</field>
+    </record>
+    <record id="internship_maxime_geograph" model="internship.internship">
+        <field name="name">Digital Cartography Internship</field>
+        <field name="student_id" ref="student_ali"/>
+        <field name="company_id" ref="company_geograph"/>
+        <field name="academic_tutor">prof.geo@univ-rouen.fr</field>
+        <field name="professional_tutor">cartographe@geoworld.com</field>
+        <field name="status">pending</field>
+        <field name="start_date">2026-01-05</field>
+        <field name="end_date">2026-06-05</field>
+        <field name="subject">Cartographie numérique</field>
+        <field name="description">Création de cartes thématiques pour un atlas en ligne.</field>
+    </record>
+    <record id="internship_julia_psycho" model="internship.internship">
+        <field name="name">Clinical Psychology Internship</field>
+        <field name="student_id" ref="student_jane"/>
+        <field name="company_id" ref="company_psycho"/>
+        <field name="academic_tutor">prof.psycho@univ-mulhouse.fr</field>
+        <field name="professional_tutor">psychologue.clinicien@psychocare.com</field>
+        <field name="status">ongoing</field>
+        <field name="start_date">2025-03-20</field>
+        <field name="end_date">2025-09-20</field>
+        <field name="subject">Psychologie clinique</field>
+        <field name="description">Observation et participation à des entretiens cliniques.</field>
+    </record>
+
+    <!-- Demo Questions -->
+    <record id="question_motivation" model="internship.question">
+        <field name="internship_id" ref="internship_john"/>
+        <field name="name">Why do you want this internship?</field>
+        <field name="question_type">text</field>
+        <field name="is_required">True</field>
+        <field name="sequence">1</field>
+    </record>
+    <record id="question_skills" model="internship.question">
+        <field name="internship_id" ref="internship_jane"/>
+        <field name="name">What skills do you bring?</field>
+        <field name="question_type">textarea</field>
+        <field name="is_required">True</field>
+        <field name="sequence">2</field>
+    </record>
+    <record id="question_availability" model="internship.question">
+        <field name="internship_id" ref="internship_john"/>
+        <field name="name">When are you available to start?</field>
+        <field name="question_type">date</field>
+        <field name="is_required">False</field>
+        <field name="sequence">3</field>
+    </record>
+    <!-- Demo Applications -->
+    <record id="application_john_acme" model="internship.application">
+        <field name="student_id" ref="student_john"/>
+        <field name="internship_id" ref="internship_john"/>
+        <field name="application_date">2025-03-05</field>
+        <field name="status">accepted</field>
+        <field name="cover_letter">I am very motivated to join ACME Corp.</field>
+    </record>
+    <record id="application_jane_beta" model="internship.application">
+        <field name="student_id" ref="student_jane"/>
+        <field name="internship_id" ref="internship_jane"/>
+        <field name="application_date">2025-04-20</field>
+        <field name="status">under_review</field>
+        <field name="cover_letter">Finance is my passion.</field>
+    </record>
+    <record id="application_ali_zen" model="internship.application">
+        <field name="student_id" ref="student_ali"/>
+        <field name="internship_id" ref="internship_ali"/>
+        <field name="application_date">2024-09-10</field>
+        <field name="status">rejected</field>
+        <field name="cover_letter">Interested in biotech modeling.</field>
+    </record>
+    <!-- Demo Application Answers -->
+    <record id="answer_john_motivation" model="internship.application.answer">
+        <field name="application_id" ref="application_john_acme"/>
+        <field name="question_id" ref="question_motivation"/>
+        <field name="answer_text">Because I love web development!</field>
+    </record>
+    <record id="answer_jane_skills" model="internship.application.answer">
+        <field name="application_id" ref="application_jane_beta"/>
+        <field name="question_id" ref="question_skills"/>
+        <field name="answer_text">Analytical thinking, Excel, teamwork.</field>
+    </record>
+    <record id="answer_ali_availability" model="internship.application.answer">
+        <field name="application_id" ref="application_ali_zen"/>
+        <field name="question_id" ref="question_availability"/>
+        <field name="answer_text">2024-09-15</field>
+    </record>
+    <!-- Update Reports to match model fields -->
+    <record id="report_john" model="internship.report">
+        <field name="name">Internship Report - John</field>
+        <field name="internship_id" ref="internship_john"/>
+        <field name="type">final</field>
+        <field name="state">validated</field>
+        <field name="submission_date">2025-06-30</field>
+        <field name="feedback">Excellent work.</field>
+        <field name="is_validated">True</field>
+    </record>
+    <record id="report_jane" model="internship.report">
+        <field name="name">Internship Report - Jane</field>
+        <field name="internship_id" ref="internship_jane"/>
+        <field name="type">monthly</field>
+        <field name="state">submitted</field>
+        <field name="submission_date">2025-08-15</field>
+        <field name="feedback">Good analysis.</field>
+        <field name="is_validated">False</field>
+    </record>
+    <record id="report_ali" model="internship.report">
+        <field name="name">Internship Report - Ali</field>
+        <field name="internship_id" ref="internship_ali"/>
+        <field name="type">weekly</field>
+        <field name="state">draft</field>
+        <field name="submission_date">2025-01-31</field>
+        <field name="feedback">Needs improvement.</field>
+        <field name="is_validated">False</field>
+    </record>
+    <record id="report_theo_innov" model="internship.report">
+        <field name="name">Internship Report - Theo</field>
+        <field name="internship_id" ref="internship_theo_innov"/>
+        <field name="type">final</field>
+        <field name="state">submitted</field>
+        <field name="submission_date">2025-09-30</field>
+        <field name="feedback">AI project completed successfully.</field>
+        <field name="is_validated">True</field>
+    </record>
+    <record id="report_lea_market" model="internship.report">
+        <field name="name">Internship Report - Lea</field>
+        <field name="internship_id" ref="internship_lea_market"/>
+        <field name="type">monthly</field>
+        <field name="state">validated</field>
+        <field name="submission_date">2025-07-15</field>
+        <field name="feedback">Excellent digital strategy analysis.</field>
+        <field name="is_validated">True</field>
+    </record>
+    <record id="report_hugo_legal" model="internship.report">
+        <field name="name">Internship Report - Hugo</field>
+        <field name="internship_id" ref="internship_hugo_legal"/>
+        <field name="type">weekly</field>
+        <field name="state">draft</field>
+        <field name="submission_date">2025-02-28</field>
+        <field name="feedback">Legal research in progress.</field>
+        <field name="is_validated">False</field>
+    </record>
+    <record id="report_chloe_comms" model="internship.report">
+        <field name="name">Internship Report - Chloe</field>
+        <field name="internship_id" ref="internship_chloe_comms"/>
+        <field name="type">final</field>
+        <field name="state">submitted</field>
+        <field name="submission_date">2025-10-31</field>
+        <field name="feedback">Press relations event organized.</field>
+        <field name="is_validated">True</field>
+    </record>
+    <record id="report_louis_physio" model="internship.report">
+        <field name="name">Internship Report - Louis</field>
+        <field name="internship_id" ref="internship_louis_physio"/>
+        <field name="type">monthly</field>
+        <field name="state">validated</field>
+        <field name="submission_date">2025-07-10</field>
+        <field name="feedback">Research results validated.</field>
+        <field name="is_validated">True</field>
+    </record>
+    <record id="report_manon_chemlab" model="internship.report">
+        <field name="name">Internship Report - Manon</field>
+        <field name="internship_id" ref="internship_manon_chemlab"/>
+        <field name="type">final</field>
+        <field name="state">submitted</field>
+        <field name="submission_date">2025-01-31</field>
+        <field name="feedback">Organic chemistry synthesis completed.</field>
+        <field name="is_validated">True</field>
+    </record>
+    <record id="report_arthur_historia" model="internship.report">
+        <field name="name">Internship Report - Arthur</field>
+        <field name="internship_id" ref="internship_arthur_historia"/>
+        <field name="type">weekly</field>
+        <field name="state">draft</field>
+        <field name="submission_date">2025-12-31</field>
+        <field name="feedback">Archival digitization ongoing.</field>
+        <field name="is_validated">False</field>
+    </record>
+    <record id="report_camille_lingua" model="internship.report">
+        <field name="name">Internship Report - Camille</field>
+        <field name="internship_id" ref="internship_camille_lingua"/>
+        <field name="type">final</field>
+        <field name="state">validated</field>
+        <field name="submission_date">2025-06-15</field>
+        <field name="feedback">Translation project delivered.</field>
+        <field name="is_validated">True</field>
+    </record>
+    <record id="report_jules_econo" model="internship.report">
+        <field name="name">Internship Report - Jules</field>
+        <field name="internship_id" ref="internship_jules_econo"/>
+        <field name="type">monthly</field>
+        <field name="state">submitted</field>
+        <field name="submission_date">2025-03-31</field>
+        <field name="feedback">Market analysis completed.</field>
+        <field name="is_validated">True</field>
+    </record>
+    <record id="report_emma_socio" model="internship.report">
+        <field name="name">Internship Report - Emma</field>
+        <field name="internship_id" ref="internship_emma_socio"/>
+        <field name="type">weekly</field>
+        <field name="state">draft</field>
+        <field name="submission_date">2026-01-31</field>
+        <field name="feedback">Survey in progress.</field>
+        <field name="is_validated">False</field>
+    </record>
+    <record id="report_gabriel_philo" model="internship.report">
+        <field name="name">Internship Report - Gabriel</field>
+        <field name="internship_id" ref="internship_gabriel_philo"/>
+        <field name="type">final</field>
+        <field name="state">validated</field>
+        <field name="submission_date">2025-10-01</field>
+        <field name="feedback">Ethics research published.</field>
+        <field name="is_validated">True</field>
+    </record>
+    <record id="report_alice_artify" model="internship.report">
+        <field name="name">Internship Report - Alice</field>
+        <field name="internship_id" ref="internship_alice_artify"/>
+        <field name="type">monthly</field>
+        <field name="state">submitted</field>
+        <field name="submission_date">2024-12-31</field>
+        <field name="feedback">Graphic design portfolio delivered.</field>
+        <field name="is_validated">True</field>
+    </record>
+    <record id="report_adam_musica" model="internship.report">
+        <field name="name">Internship Report - Adam</field>
+        <field name="internship_id" ref="internship_adam_musica"/>
+        <field name="type">weekly</field>
+        <field name="state">draft</field>
+        <field name="submission_date">2026-02-28</field>
+        <field name="feedback">Music production ongoing.</field>
+        <field name="is_validated">False</field>
+    </record>
+    <record id="report_rose_designo" model="internship.report">
+        <field name="name">Internship Report - Rose</field>
+        <field name="internship_id" ref="internship_rose_designo"/>
+        <field name="type">final</field>
+        <field name="state">validated</field>
+        <field name="submission_date">2025-05-20</field>
+        <field name="feedback">UI/UX design completed.</field>
+        <field name="is_validated">True</field>
+    </record>
+    <record id="report_paul_architek" model="internship.report">
+        <field name="name">Internship Report - Paul</field>
+        <field name="internship_id" ref="internship_paul_architek"/>
+        <field name="type">monthly</field>
+        <field name="state">submitted</field>
+        <field name="submission_date">2024-11-30</field>
+        <field name="feedback">Architectural design delivered.</field>
+        <field name="is_validated">True</field>
+    </record>
+    <record id="report_lina_journo" model="internship.report">
+        <field name="name">Internship Report - Lina</field>
+        <field name="internship_id" ref="internship_lina_journo"/>
+        <field name="type">weekly</field>
+        <field name="state">draft</field>
+        <field name="submission_date">2026-03-31</field>
+        <field name="feedback">Journalism investigation ongoing.</field>
+        <field name="is_validated">False</field>
+    </record>
+    <record id="report_nathan_sportex" model="internship.report">
+        <field name="name">Internship Report - Nathan</field>
+        <field name="internship_id" ref="internship_nathan_sportex"/>
+        <field name="type">final</field>
+        <field name="state">validated</field>
+        <field name="submission_date">2025-08-31</field>
+        <field name="feedback">Sports event managed successfully.</field>
+        <field name="is_validated">True</field>
+    </record>
+    <record id="report_zoe_travelia" model="internship.report">
+        <field name="name">Internship Report - Zoe</field>
+        <field name="internship_id" ref="internship_zoe_travelia"/>
+        <field name="type">monthly</field>
+        <field name="state">submitted</field>
+        <field name="submission_date">2024-10-31</field>
+        <field name="feedback">Travel design project delivered.</field>
+        <field name="is_validated">True</field>
+    </record>
+    <record id="report_victor_hospita" model="internship.report">
+        <field name="name">Internship Report - Victor</field>
+        <field name="internship_id" ref="internship_victor_hospita"/>
+        <field name="type">weekly</field>
+        <field name="state">draft</field>
+        <field name="submission_date">2026-04-30</field>
+        <field name="feedback">Hotel management in progress.</field>
+        <field name="is_validated">False</field>
+    </record>
+    <record id="report_eva_foodie" model="internship.report">
+        <field name="name">Internship Report - Eva</field>
+        <field name="internship_id" ref="internship_eva_foodie"/>
+        <field name="type">final</field>
+        <field name="state">validated</field>
+        <field name="submission_date">2025-09-10</field>
+        <field name="feedback">Culinary creation completed.</field>
+        <field name="is_validated">True</field>
+    </record>
+    <record id="report_raphael_medica" model="internship.report">
+        <field name="name">Internship Report - Raphael</field>
+        <field name="internship_id" ref="internship_raphael_medica"/>
+        <field name="type">monthly</field>
+        <field name="state">submitted</field>
+        <field name="submission_date">2024-08-31</field>
+        <field name="feedback">Clinical research completed.</field>
+        <field name="is_validated">True</field>
+    </record>
+    <record id="report_ambre_pharma" model="internship.report">
+        <field name="name">Internship Report - Ambre</field>
+        <field name="internship_id" ref="internship_ambre_pharma"/>
+        <field name="type">weekly</field>
+        <field name="state">draft</field>
+        <field name="submission_date">2026-05-31</field>
+        <field name="feedback">Pharmacovigilance ongoing.</field>
+        <field name="is_validated">False</field>
+    </record>
+    <record id="report_samuel_engine" model="internship.report">
+        <field name="name">Internship Report - Samuel</field>
+        <field name="internship_id" ref="internship_samuel_engine"/>
+        <field name="type">final</field>
+        <field name="state">validated</field>
+        <field name="submission_date">2025-12-31</field>
+        <field name="feedback">Mechanical design delivered.</field>
+        <field name="is_validated">True</field>
+    </record>
+    <record id="report_clara_politic" model="internship.report">
+        <field name="name">Internship Report - Clara</field>
+        <field name="internship_id" ref="internship_clara_politic"/>
+        <field name="type">monthly</field>
+        <field name="state">submitted</field>
+        <field name="submission_date">2024-06-15</field>
+        <field name="feedback">Political analysis completed.</field>
+        <field name="is_validated">True</field>
+    </record>
+    <record id="report_maxime_geograph" model="internship.report">
+        <field name="name">Internship Report - Maxime</field>
+        <field name="internship_id" ref="internship_maxime_geograph"/>
+        <field name="type">weekly</field>
+        <field name="state">draft</field>
+        <field name="submission_date">2026-06-05</field>
+        <field name="feedback">Cartography project ongoing.</field>
+        <field name="is_validated">False</field>
+    </record>
+    <record id="report_julia_psycho" model="internship.report">
+        <field name="name">Internship Report - Julia</field>
+        <field name="internship_id" ref="internship_julia_psycho"/>
+        <field name="type">final</field>
+        <field name="state">validated</field>
+        <field name="submission_date">2025-09-20</field>
+        <field name="feedback">Clinical psychology internship completed.</field>
+        <field name="is_validated">True</field>
+    </record>
+</odoo>

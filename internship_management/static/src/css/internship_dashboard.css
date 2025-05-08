@@ -1,0 +1,169 @@
+/* internship_dashboard.css placeholder */
+.internship-dashboard-placeholder {
+  border: 1px solid green;
+}
+
+/* General Dashboard Styling */
+.internship_dashboard {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Light grey background */
+}
+
+/* Card Styling */
+.internship_dashboard .card {
+    margin-bottom: 1.5rem; /* Spacing between cards */
+    border: none; /* Remove default border if using shadows */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.internship_dashboard .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.internship_dashboard .card-header {
+    background-color: #FFFFFF; /* White header for cards */
+    border-bottom: 1px solid #e3e6f0; /* Light border */
+    font-weight: 600; /* Bolder font for headers */
+    color: #5a5c69; /* Primary text color */
+    padding: .75rem 1.25rem;
+}
+
+.internship_dashboard .card-header .text-primary {
+    color: #4e73df !important; /* Ensure primary color for titles */
+}
+
+
+.internship_dashboard .card-body {
+    padding: 1.25rem;
+    color: #5a5c69; /* Default text color for card body */
+}
+
+/* KPI Card Specific Styling */
+.internship_dashboard .kpi-total,
+.internship_dashboard .kpi-ongoing,
+.internship_dashboard .kpi-completed,
+.internship_dashboard .kpi-pending {
+    font-size: 2rem; /* Larger font for KPI numbers */
+    font-weight: 700;
+    color: #36454F; /* Darker color for KPI numbers */
+}
+
+.internship_dashboard .border-left-primary { border-left: .25rem solid #4e73df !important; }
+.internship_dashboard .border-left-success { border-left: .25rem solid #1cc88a !important; }
+.internship_dashboard .border-left-info   { border-left: .25rem solid #36b9cc !important; }
+.internship_dashboard .border-left-warning { border-left: .25rem solid #f6c23e !important; }
+
+.internship_dashboard .text-xs {
+    font-size: .75rem; /* Slightly larger for better readability */
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.internship_dashboard .text-gray-300 { color: #dddfeb !important; }
+.internship_dashboard .text-gray-800 { color: #5a5c69 !important; }
+
+.internship_dashboard .progress {
+    height: .5rem; /* Slimmer progress bar */
+}
+
+/* Chart Styling */
+.internship_dashboard .chart-pie,
+.internship_dashboard .chart-bar,
+.internship_dashboard .chart-area {
+    position: relative;
+    height: 20rem; /* Default height for charts */
+    width: 100%;
+}
+
+/* Recent Internships List */
+.internship_dashboard .recent-internships {
+    padding: 0;
+}
+.internship_dashboard .recent-internships .list-group-item {
+    border: 0;
+    border-bottom: 1px solid #e3e6f0; /* Separator for items */
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+}
+.internship_dashboard .recent-internships .list-group-item:last-child {
+    border-bottom: 0;
+}
+.internship_dashboard .recent-internships .list-group-item:hover {
+    background-color: #f8f9fc; /* Light hover effect */
+}
+
+/* Filter and Button Styling */
+.internship_dashboard .form-control-sm {
+    border-radius: .2rem;
+    border-color: #d1d3e2;
+}
+.internship_dashboard .form-control-sm:focus {
+    border-color: #4e73df;
+    box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+}
+
+.internship_dashboard .btn {
+    border-radius: .25rem;
+    font-weight: 500;
+    padding: .375rem .75rem;
+    font-size: .875rem;
+}
+
+.internship_dashboard .btn-primary {
+    background-color: #4e73df;
+    border-color: #4e73df;
+    color: #fff;
+}
+.internship_dashboard .btn-primary:hover {
+    background-color: #2e59d9;
+    border-color: #2653b4;
+}
+.internship_dashboard .btn-secondary {
+    background-color: #858796;
+    border-color: #858796;
+    color: #fff;
+}
+.internship_dashboard .btn-secondary:hover {
+    background-color: #717384;
+    border-color: #606270;
+}
+
+/* Spinner for refresh */
+.dashboard-spinner {
+    font-size: 0.9em;
+    margin-left: 5px;
+}
+
+/* Table styling for pivot table */
+.internship_dashboard .pivot-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.internship_dashboard .pivot-table th,
+.internship_dashboard .pivot-table td {
+    border: 1px solid #e3e6f0;
+    padding: 8px;
+    text-align: left;
+    font-size: 0.85rem;
+}
+.internship_dashboard .pivot-table th {
+    background-color: #f8f9fc;
+    font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .internship_dashboard .chart-pie,
+    .internship_dashboard .chart-bar,
+    .internship_dashboard .chart-area {
+        height: 15rem; /* Smaller height on smaller screens */
+    }
+    .internship_dashboard .kpi-total,
+    .internship_dashboard .kpi-ongoing,
+    .internship_dashboard .kpi-completed,
+    .internship_dashboard .kpi-pending {
+        font-size: 1.75rem;
+    }
+}

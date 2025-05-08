@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Removed assets_backend template to avoid error with missing web.assets_backend -->
+</odoo>

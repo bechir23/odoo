@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="report_convention">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2 class="text-center">CONVENTION DE STAGE</h2>
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <h4>Informations de l'étudiant</h4>
+                                <p><strong>Nom:</strong> <span t-field="doc.student_id.name"/></p>
+                                <p><strong>Email:</strong> <span t-field="doc.student_id.email"/></p>
+                                <p><strong>Filière:</strong> <span t-field="doc.student_id.field_of_study"/></p>
+                                <p><strong>Niveau:</strong> <span t-field="doc.student_id.level"/></p>
+                            </div>
+                        </div>
+                        
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <h4>Informations de l'entreprise</h4>
+                                <p><strong>Nom:</strong> <span t-field="doc.company_id.name"/></p>
+                                <p><strong>Secteur d'activité:</strong> <span t-field="doc.company_id.industry"/></p>
+                                <p><strong>Adresse:</strong> <span t-field="doc.company_id.address"/></p>
+                            </div>
+                        </div>
+                        
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <h4>Informations du stage</h4>
+                                <p><strong>Sujet:</strong> <span t-field="doc.subject"/></p>
+                                <p><strong>Description:</strong> <span t-field="doc.description"/></p>
+                                <p><strong>Date de début:</strong> <span t-field="doc.start_date"/></p>
+                                <p><strong>Date de fin:</strong> <span t-field="doc.end_date"/></p>
+                                <p><strong>Tuteur académique:</strong> <span t-field="doc.academic_tutor"/></p>
+                                <p><strong>Tuteur professionnel:</strong> <span t-field="doc.professional_tutor"/></p>
+                            </div>
+                        </div>
+                        
+                        <div class="row mt-5">
+                            <div class="col-4 text-center">
+                                <p><strong>Signature de l'étudiant</strong></p>
+                                <img t-if="doc.student_signature" t-att-src="'data:image/png;base64,%s' % to_text(doc.student_signature)" style="max-height: 100px;"/>
+                                <p class="mt-2">Date: ____________________</p>
+                            </div>
+                            <div class="col-4 text-center">
+                                <p><strong>Signature du tuteur académique</strong></p>
+                                <img t-if="doc.academic_tutor_signature" t-att-src="'data:image/png;base64,%s' % to_text(doc.academic_tutor_signature)" style="max-height: 100px;"/>
+                                <p class="mt-2">Date: ____________________</p>
+                            </div>
+                            <div class="col-4 text-center">
+                                <p><strong>Signature du tuteur professionnel</strong></p>
+                                <img t-if="doc.professional_tutor_signature" t-att-src="'data:image/png;base64,%s' % to_text(doc.professional_tutor_signature)" style="max-height: 100px;"/>
+                                <p class="mt-2">Date: ____________________</p>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

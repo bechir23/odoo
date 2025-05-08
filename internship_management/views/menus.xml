@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Define actions first, before they're referenced in menus -->
+    <record id="action_internship_statistics" model="ir.actions.act_window">
+        <field name="name">Internship Dashboard</field>
+        <field name="res_model">internship.internship</field>
+        <field name="view_mode">kanban,graph,pivot</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No internships found!
+            </p>
+            <p>
+                Create your first internship to see statistics.
+            </p>
+        </field>
+    </record>
+
+    <record id="action_student_tree" model="ir.actions.act_window">
+        <field name="name">Students</field>
+        <field name="res_model">internship.student</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_company_tree" model="ir.actions.act_window">
+        <field name="name">Companies</field>
+        <field name="res_model">internship.company</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_internship_tree" model="ir.actions.act_window">
+        <field name="name">Internships</field>
+        <field name="res_model">internship.internship</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_report_tree" model="ir.actions.act_window">
+        <field name="name">Reports</field>
+        <field name="res_model">internship.report</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Main menu for Internship Management -->
+    <menuitem id="menu_internship_management" 
+              name="Internship Management" 
+              sequence="10"/>
+
+    <!-- Sub-menus with actions -->
+    <menuitem id="menu_internship_dashboard" 
+              name="Dashboard" 
+              parent="menu_internship_management" 
+              action="action_internship_statistics" 
+              sequence="10"/>
+              
+    <menuitem id="menu_internship_students" 
+              name="Students" 
+              parent="menu_internship_management" 
+              action="action_student_tree" 
+              sequence="20"/>
+
+    <menuitem id="menu_internship_companies" 
+              name="Companies" 
+              parent="menu_internship_management" 
+              action="action_company_tree" 
+              sequence="30"/>
+
+    <menuitem id="menu_internship_internships" 
+              name="Internships"
+              parent="menu_internship_management" 
+              action="action_internship_tree" 
+              sequence="40"/>
+
+    <menuitem id="menu_internship_reports" 
+              name="Reports" 
+              parent="menu_internship_management" 
+              action="action_report_tree" 
+              sequence="50"/>
+</odoo>

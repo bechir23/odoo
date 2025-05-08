@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-name="internship_management.internship_dashboard">
+        <div class="internship_dashboard p-3">
+            <!-- Filter Section -->
+            <div class="row mb-3">
+                <div class="col-12">
+                    <div class="card shadow">
+                        <div class="card-header bg-light py-3">
+                            <h6 class="mb-0 font-weight-bold text-primary">Filters</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-2 mb-2">
+                                    <label for="status_filter">Status</label>
+                                    <select id="status_filter" class="form-control form-control-sm dashboard-filter">
+                                        <option value="">All</option>
+                                        <option value="pending">Pending</option>
+                                        <option value="ongoing">Ongoing</option>
+                                        <option value="completed">Completed</option>
+                                        <option value="cancelled">Cancelled</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 mb-2">
+                                    <label for="company_filter">Company</label>
+                                    <select id="company_filter" class="form-control form-control-sm dashboard-filter">
+                                        <option value="">All Companies</option>
+                                        <!-- Companies will be populated by JS -->
+                                    </select>
+                                </div>
+                                <div class="col-md-2 mb-2">
+                                    <label for="date_from">Date From</label>
+                                    <input type="text" id="date_from" class="form-control form-control-sm datepicker dashboard-filter"/>
+                                </div>
+                                <div class="col-md-2 mb-2">
+                                    <label for="date_to">Date To</label>
+                                    <input type="text" id="date_to" class="form-control form-control-sm datepicker dashboard-filter"/>
+                                </div>
+                                <div class="col-md-3 mb-2">
+                                    <label for="field_filter">Field of Study</label>
+                                    <select id="field_filter" class="form-control form-control-sm dashboard-filter">
+                                        <option value="">All Fields</option>
+                                        <!-- Field options will be populated by JS -->
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-12 text-right">
+                                    <button class="btn btn-sm btn-secondary filter-reset mr-1">
+                                        <i class="fa fa-undo mr-1"></i>Reset
+                                    </button>
+                                    <button class="btn btn-sm btn-primary refresh-dashboard">
+                                        <i class="fa fa-refresh mr-1"></i>Refresh
+                                        <span class="dashboard-spinner fa fa-spinner fa-spin d-none ml-1"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KPIs Row -->
+            <div class="row">
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-left-primary shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total Internships</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800 kpi-total">0</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fa fa-briefcase fa-2x text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-left-warning shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Ongoing</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800 kpi-ongoing">0</div>
+                                    <div class="progress progress-sm mt-2">
+                                        <div class="progress-bar bg-warning progress-ongoing" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fa fa-cogs fa-2x text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-left-success shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Completed</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800 kpi-completed">0</div>
+                                    <div class="progress progress-sm mt-2">
+                                        <div class="progress-bar bg-success progress-completed" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fa fa-check-circle fa-2x text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-left-info shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Pending</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800 kpi-pending">0</div>
+                                    <div class="progress progress-sm mt-2">
+                                        <div class="progress-bar bg-info progress-pending" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fa fa-clock-o fa-2x text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Charts and Recent Internships Row -->
+            <div class="row">
+                <div class="col-lg-7 mb-4">
+                    <!-- Status Distribution Chart -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            <h6 class="m-0 font-weight-bold text-primary">Internship Status Distribution</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-pie pt-4 pb-2">
+                                <canvas id="statusChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-5 mb-4">
+                    <!-- Recent Internships -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            <h6 class="m-0 font-weight-bold text-primary">Recent Internships</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="recent-internships" style="max-height: 320px; overflow-y: auto;">
+                                <!-- Populated by JS -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                 <div class="col-lg-6 mb-4">
+                    <!-- Company Distribution Chart -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            <h6 class="m-0 font-weight-bold text-primary">Top Companies (by Internships)</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-bar">
+                                <canvas id="companyChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <!-- Field of Study Chart -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            <h6 class="m-0 font-weight-bold text-primary">Distribution by Field of Study</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-bar">
+                                <canvas id="fieldChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Evolution Chart -->
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            <h6 class="m-0 font-weight-bold text-primary">Internship Evolution (by Start Date - Last 12 Months)</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-area">
+                                <canvas id="evolutionChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pivot Table -->
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            <h6 class="m-0 font-weight-bold text-primary">Academic Tutor Analysis (Internship Status)</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive pivot-table">
+                                <!-- Populated by JS -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>

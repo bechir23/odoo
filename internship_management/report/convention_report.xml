@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="report_internship_convention" model="ir.actions.report">
+        <field name="name">Convention de Stage</field>
+        <field name="model">internship.internship</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">internship_management.report_convention</field>
+        <field name="report_file">internship_management.report_convention</field>
+        <field name="binding_model_id" ref="model_internship_internship"/>
+        <field name="binding_type">report</field>
+        <field name="print_report_name">'Convention_Stage_' + object.student_id.name</field>
+    </record>
+</odoo>

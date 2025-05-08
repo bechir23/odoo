@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_internship_student,access_internship_student,model_internship_student,base.group_user,1,1,1,1
+access_internship_company,access_internship_company,model_internship_company,base.group_user,1,1,1,1
+access_internship_internship,access_internship_internship,model_internship_internship,base.group_user,1,1,1,1
+access_internship_report,access_internship_report,model_internship_report,base.group_user,1,1,1,1
+access_internship_application,access_internship_application,model_internship_application,base.group_user,1,1,1,1
+access_internship_question,access_internship_question,model_internship_question,base.group_user,1,1,1,1
+access_internship_application_answer,access_internship_application_answer,model_internship_application_answer,base.group_user,1,1,1,1

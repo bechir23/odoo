@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Custom Dashboard View -->
+    <template id="internship_dashboard_template">
+        <div class="container-fluid d-flex flex-column">
+            <!-- Filter Section -->
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="m-0">Filtres</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="status_filter">Statut</label>
+                                <select class="form-control" id="status_filter" t-on-change="onFilterChange">
+                                    <option value="">Tous</option>
+                                    <option value="pending">En attente</option>
+                                    <option value="ongoing">En cours</option>
+                                    <option value="completed">Terminé</option>
+                                    <option value="cancelled">Annulé</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="date_start">Date début</label>
+                                <input type="date" class="form-control" id="date_start" t-on-change="onFilterChange"/>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="date_end">Date fin</label>
+                                <input type="date" class="form-control" id="date_end" t-on-change="onFilterChange"/>
+                            </div>
+                        </div>
+                        <div class="col-md-3 d-flex align-items-end">
+                            <button class="btn btn-secondary" t-on-click="resetFilters">Réinitialiser</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- KPI Cards Row -->
+            <div class="row mb-4">
+                <div class="col-md-3">
+                    <div class="card h-100 border-primary">
+                        <div class="card-body text-center">
+                            <h1 class="display-4 font-weight-bold text-primary" t-esc="state.kpis.total_internships"/>
+                            <p class="card-text">Stages au total</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100 border-warning">
+                        <div class="card-body text-center">
+                            <h1 class="display-4 font-weight-bold text-warning" t-esc="state.kpis.ongoing_internships"/>
+                            <p class="card-text">Stages en cours</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100 border-success">
+                        <div class="card-body text-center">
+                            <h1 class="display-4 font-weight-bold text-success" t-esc="state.kpis.completed_internships"/>
+                            <p class="card-text">Stages terminés</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100 border-info">
+                        <div class="card-body text-center">
+                            <h1 class="display-4 font-weight-bold text-info" t-esc="state.kpis.pending_internships"/>
+                            <p class="card-text">Stages en attente</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Charts Section -->
+            <div class="row mb-4">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-light">
+                            <h5 class="m-0">Répartition des Stages par Statut</h5>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="statusChart" height="250"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-light">
+                            <h5 class="m-0">Top Entreprises</h5>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="companyChart" height="250"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-light">
+                            <h5 class="m-0">Évolution des Stages</h5>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="evolutionChart" height="150"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pivot Table -->
+            <div class="card">
+                <div class="card-header bg-light">
+                    <h5 class="m-0">Analyse par Tuteur et Statut</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Tuteur Académique</th>
+                                    <th t-foreach="state.pivot_table.cols" t-as="col" t-esc="state.status_map[col]"/>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="state.pivot_table.rows" t-as="row" t-att-class="row_index % 2 === 0 ? 'bg-light' : ''">
+                                    <td t-esc="row"/>
+                                    <t t-set="row_sum" t-value="0"/>
+                                    <t t-foreach="state.pivot_table.values[row_index]" t-as="value">
+                                        <td t-esc="value"/>
+                                        <t t-set="row_sum" t-value="row_sum + value"/>
+                                    </t>
+                                    <td class="font-weight-bold" t-esc="row_sum"/>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+    
+    <!-- Dashboard Client Action -->
+    <record id="action_internship_dashboard" model="ir.actions.client">
+        <field name="name">Internship Dashboard</field>
+        <field name="tag">internship_dashboard</field>
+        <field name="target">main</field>
+    </record>
+
+    <!-- Define views for statistics and dashboard, but no actions -->
+    <!-- Graph View -->
+    <record id="view_internship_graph" model="ir.ui.view">
+        <field name="name">internship.graph</field>
+        <field name="model">internship.internship</field>
+        <field name="arch" type="xml">
+            <graph string="Internships by Status" type="pie">
+                <field name="status"/>
+                <field name="id" type="count"/>
+            </graph>
+        </field>
+    </record>
+    
+    <!-- Pivot View -->
+    <record id="view_internship_pivot" model="ir.ui.view">
+        <field name="name">internship.pivot</field>
+        <field name="model">internship.internship</field>
+        <field name="arch" type="xml">
+            <pivot string="Internship Analysis">
+                <field name="company_id" type="row"/>
+                <field name="status" type="col"/>
+                <field name="id" type="count"/>
+            </pivot>
+        </field>
+    </record>
+    
+    <!-- Dashboard Kanban -->
+    <record id="view_internship_dashboard_kanban" model="ir.ui.view">
+        <field name="name">internship.dashboard.kanban</field>
+        <field name="model">internship.internship</field>
+        <field name="arch" type="xml">
+            <kanban create="false" class="o_dashboard_kanban">
+                <field name="name"/>
+                <field name="student_id"/>
+                <field name="company_id"/>
+                <field name="status"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_card oe_kanban_global_click">
+                            <div class="oe_kanban_content">
+                                <div class="oe_kanban_card_header">
+                                    <div class="o_primary">
+                                        <field name="name"/>
+                                    </div>
+                                </div>
+                                <div class="container o_kanban_card_content">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <strong>Student:</strong> <field name="student_id"/>
+                                        </div>
+                                        <div class="col-6">
+                                            <strong>Company:</strong> <field name="company_id"/>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-6">
+                                            <strong>Start:</strong> <field name="start_date"/>
+                                        </div>
+                                        <div class="col-6">
+                                            <strong>End:</strong> <field name="end_date"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="o_kanban_record_bottom mt-2">
+                                    <div class="oe_kanban_bottom_left">
+                                        <span t-attf-class="badge #{record.status.raw_value == 'pending' ? 'bg-info' : record.status.raw_value == 'ongoing' ? 'bg-warning' : 'bg-success'}">
+                                            <field name="status"/>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+</odoo>
