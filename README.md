@@ -173,6 +173,7 @@ def install():
 
 ## Auteur
 - Bechir Ben Tekfa
-
+- Yassine Yahyaoui
+- Med Yassine Ezzaouia
 ---
-> Ce module va au-delà d'une simple gestion de stages : il propose une expérience complète, automatisée et analytique pour tous les acteurs du suivi académique.
+> Ce module propose une expérience complète, automatisée et analytique pour tous les acteurs du suivi académique.
