@@ -2,7 +2,54 @@
 
 ## Présentation Générale
 
-Ce module Odoo permet de gérer l'ensemble du processus de suivi des stages académiques : étudiants, entreprises, candidatures, stages, rapports, conventions, analyse automatique (OCR), et tableaux de bord analytiques. Il offre une interface moderne, centralisée et adaptée aux besoins des établissements universitaires.
+Ce module Odoo 16 permet de gérer l'ensemble du processus de suivi des stages académiques : étudiants, entreprises, candidatures, stages, rapports, conventions, analyse automatique (OCR), et tableaux de bord analytiques. Il offre une interface moderne, centralisée et adaptée aux besoins des établissements universitaires.
+
+## Installation (Windows, Python 3.12, Odoo 16)
+
+### 1. Prérequis
+- Python 3.12
+- Git
+- PostgreSQL
+- Tesseract OCR (https://github.com/tesseract-ocr/tesseract)
+
+### 2. Création de l'environnement virtuel
+```bash
+cd C:\Bureau\odoo_project
+python -m venv venv
+cd venv\Scripts
+activate.bat
+cd ..
+```
+
+### 3. Clonage d'Odoo 16
+```bash
+git clone -b 1 https://github.com/odoo/odoo.git odoo-16
+```
+
+### 4. Installation des dépendances Python
+Ajoutez à `requirements.txt` :
+```
+pytesseract>=0.3.8
+pdf2image>=1.16.0
+Pillow>=8.3.1
+PyPDF2>=2.0.0
+```
+Installez :
+```bash
+pip install -r requirements.txt
+```
+
+### 5. Installation de Tesseract
+- Installez Tesseract OCR et ajoutez le chemin de `tesseract.exe` à la variable d'environnement PATH.
+
+### 6. Placement du module
+- Placez le dossier `internship_management` dans `custom-addons/`.
+
+### 7. Lancement d'Odoo
+```bash
+cd odoo-16
+python odoo-bin -c odoo.conf --addons-path=../custom-addons,addons
+```
 
 ## Fonctionnalités détaillées
 
@@ -98,14 +145,31 @@ Ce module Odoo permet de gérer l'ensemble du processus de suivi des stages acad
 - `data/` : templates d'emails
 - `demo/` : données de démonstration
 - `static/` : images, JS, CSS pour dashboard
+- `install.py` : script d'installation rapide
 
 ## Points techniques avancés
-- Extraction OCR automatique (PyPDF2, pytesseract, pdf2image)
+- Extraction OCR automatique (PyPDF2, pytesseract, pdf2image, Pillow)
 - Génération de PDF dynamique (QWeb)
 - Dashboard analytique interactif (KPIs, graphiques, pivot)
 - Notifications SMS (Twilio) et emails
 - Signature électronique
 - Architecture MVC Odoo, code commenté et structuré
+
+## Script d'installation rapide
+```python
+# custom-addons/internship_management/install.py
+import os
+
+def install():
+    print("Installing Internship Management Module...")
+    os.system('odoo-bin -u internship_management')
+    print("Installation complete.")
+```
+
+## Dépannage
+- **Erreur psycopg2.InterfaceError** : vérifier PostgreSQL et odoo.conf
+- **OCR ne fonctionne pas** : vérifier installation de Tesseract et PATH
+- **Fichier manquant** : vérifier le manifest et la présence des fichiers
 
 ## Pour aller plus loin
 - Workflows de validation avancés
@@ -113,12 +177,10 @@ Ce module Odoo permet de gérer l'ensemble du processus de suivi des stages acad
 - Export/Import de données
 
 ## Vidéo de démonstration
-
 👉 [Lien à insérer ici pour la vidéo de démonstration]
 
 ## Auteur
 - Bechir Ben Tekfa
 
 ---
-
 > Ce module va au-delà d'une simple gestion de stages : il propose une expérience complète, automatisée et analytique pour tous les acteurs du suivi académique.
