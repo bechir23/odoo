@@ -166,15 +166,7 @@ def install():
     print("Installation complete.")
 ```
 
-## Dépannage
-- **Erreur psycopg2.InterfaceError** : vérifier PostgreSQL et odoo.conf
-- **OCR ne fonctionne pas** : vérifier installation de Tesseract et PATH
-- **Fichier manquant** : vérifier le manifest et la présence des fichiers
 
-## Pour aller plus loin
-- Workflows de validation avancés
-- Intégration RH/CRM
-- Export/Import de données
 
 ## Vidéo de démonstration
 👉 [Lien à insérer ici pour la vidéo de démonstration]
