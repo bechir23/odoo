@@ -1,120 +1,124 @@
-# Internship Management Odoo Module
+# Module Odoo - Gestion des Stages Académiques
 
-## Description
+## Présentation Générale
 
-Ce module Odoo (v16/v17 Community) permet la gestion complète des stages académiques pour les établissements universitaires. Il centralise la gestion des étudiants, entreprises partenaires, conventions, tuteurs, candidatures, questions, réponses et rapports de stage, tout en offrant des outils d'analyse et de suivi avancés.
+Ce module Odoo permet de gérer l'ensemble du processus de suivi des stages académiques : étudiants, entreprises, candidatures, stages, rapports, conventions, analyse automatique (OCR), et tableaux de bord analytiques. Il offre une interface moderne, centralisée et adaptée aux besoins des établissements universitaires.
 
-## Fonctionnalités principales
+## Fonctionnalités détaillées
 
-- **Gestion des étudiants** :
-  - Création, modification, consultation des fiches étudiants (Nom, Prénom, Email, Filière, Niveau, CV, etc.)
-  - Extraction automatique du texte du CV (PDF/Image) via OCR
-  - Suivi des stages réalisés par chaque étudiant
+### 1. Gestion des étudiants
+- Création/modification d'une fiche étudiant (nom, numéro, email, téléphone, filière, niveau).
+- Ajout d'un CV (PDF ou image) avec extraction automatique du texte via OCR (PyPDF2, pytesseract).
+- Visualisation de tous les stages réalisés par l'étudiant.
+- Accès rapide aux candidatures et rapports associés.
 
-- **Gestion des entreprises** :
-  - Base de données des entreprises partenaires (Nom, Contact, Email, Téléphone, Secteur, Adresse, etc.)
-  - Suivi des stages proposés/réalisés par chaque entreprise
+### 2. Gestion des entreprises
+- Création/modification d'une fiche entreprise (nom, secteur, adresse, site web, contact, email, téléphone).
+- Visualisation de tous les stages réalisés dans l'entreprise.
 
-- **Gestion des stages** :
-  - Création d'une fiche de stage liée à un étudiant, une entreprise, un tuteur académique et professionnel
-  - Statuts du stage (En attente, En cours, Terminé, Annulé)
-  - Génération automatique de la convention de stage (PDF depuis template QWeb)
-  - Signature électronique (étudiant, tuteur académique, tuteur professionnel)
-  - Dashboard analytique (KPIs, graphiques, évolution, répartition par entreprise/filière, etc.)
-  - Notifications par email et SMS (Twilio)
+### 3. Gestion des stages
+- Création d'un stage lié à un étudiant, une entreprise, un tuteur académique et professionnel.
+- Saisie du sujet, description, dates, signatures électroniques.
+- Suivi du statut : En attente, En cours, Terminé, Annulé.
+- Génération automatique de la convention de stage (PDF) depuis un template QWeb, avec toutes les informations et signatures.
+- Envoi de la convention par email et notification SMS (Twilio).
 
-- **Gestion des candidatures** :
-  - Suivi des candidatures à un stage (étudiant, date, statut, lettre de motivation, CV)
-  - Système de questions/réponses personnalisées pour chaque stage
-  - Stockage des réponses (texte, choix multiples, etc.)
+### 4. Gestion des candidatures
+- Un étudiant peut postuler à un stage, joindre un CV et une lettre de motivation.
+- Questions personnalisées par stage (texte, choix multiples, cases à cocher, date, etc.).
+- Stockage des réponses pour chaque candidature.
+- Suivi du statut de la candidature : Nouveau, En cours, Entretien, Accepté, Rejeté.
 
-- **Gestion des rapports de stage** :
-  - Téléversement du rapport par l'étudiant
-  - Validation/feedback par le tuteur
-  - Analyse automatique du rapport (OCR, détection des sections obligatoires)
-  - Suivi de l'état du rapport (Brouillon, Soumis, Validé, Rejeté)
+### 5. Gestion des rapports de stage
+- Téléversement du rapport (PDF ou image) par l'étudiant.
+- Extraction automatique du texte du rapport (OCR pour images, extraction texte pour PDF).
+- Détection automatique des sections obligatoires (introduction, objectifs, résultats, conclusion, etc.).
+- Feedback et validation/rejet par le tuteur.
+- Suivi du statut du rapport : Brouillon, Soumis, Validé, Rejeté.
 
-- **Gestion des sections obligatoires de rapport** :
-  - Définition des sections attendues (introduction, objectifs, conclusion, etc.)
-  - Vérification automatique de leur présence via OCR
+### 6. Sections obligatoires de rapport
+- Définition des sections attendues (nom, description, séquence, obligatoire).
+- Vérification automatique de leur présence dans le rapport via OCR.
 
-- **Sécurité et accès** :
-  - Contrôle d'accès par rôles (étudiant, tuteur, admin)
-  - Historique et suivi des actions (chatter, activités)
+### 7. Tableaux de bord et analyses
+- Dashboard interactif :
+  - KPIs (nombre total de stages, en cours, terminés, en attente, annulés)
+  - Graphiques : répartition par statut, entreprise, filière, évolution mensuelle
+  - Tableau croisé dynamique : analyse par tuteur académique et statut
+  - Liste des stages récents
+- Filtres dynamiques : statut, entreprise, filière, période
 
-- **Interface utilisateur** :
-  - Vues Formulaire, Liste, Kanban, Dashboard, Graphique, Pivot
-  - Menus clairs et navigation intuitive
+### 8. Sécurité et accès
+- Gestion des droits par rôle (étudiant, tuteur, administrateur)
+- Historique des actions (chatter, activités)
 
-## Structure du module
+### 9. Données de démonstration
+- Le dossier `demo/` contient des étudiants, entreprises, stages, candidatures, questions, réponses et rapports pré-remplis pour tester toutes les fonctionnalités.
 
-- `models/`
-  - `student.py` : Modèle étudiant (internship.student)
-  - `company.py` : Modèle entreprise (internship.company)
-  - `internship.py` : Modèle stage (internship.internship)
-  - `application.py` : Modèle candidature (internship.application)
-  - `application_answer.py` : Réponses aux questions de candidature
-  - `question.py` : Questions personnalisées pour les candidatures
-  - `report.py` : Modèle rapport de stage (internship.report)
-  - `report_section.py` : Sections obligatoires de rapport (internship.report.section)
-  - `sms_utils.py` : Utilitaires d'envoi SMS (Twilio)
+## Utilisation pas à pas
 
-- `views/`
-  - `student_views.xml` : Vues étudiant (formulaire, liste, notebook CV, stages)
-  - `company_views.xml` : Vues entreprise (formulaire, liste, stages)
-  - `internship_views.xml` : Vues stage (formulaire, liste, dashboard, signatures)
-  - `application_views.xml` : Vues candidature (formulaire, liste, réponses)
-  - `report_views.xml` : Vues rapport de stage (formulaire, liste, feedback, OCR)
-  - `menus.xml` : Menus principaux et sous-menus
-  - `dashboard_views.xml` : Dashboard analytique
+### Ajouter un étudiant
+1. Aller dans le menu "Étudiants".
+2. Cliquer sur "Créer" et remplir les champs (nom, email, filière, etc.).
+3. Ajouter un CV (PDF ou image) : le texte sera extrait automatiquement.
 
-- `report/`
-  - `convention_report.xml` : Définition du rapport PDF de convention de stage
-  - `internship_convention_template.xml` : Template QWeb du PDF
+### Ajouter une entreprise
+1. Aller dans le menu "Entreprises".
+2. Cliquer sur "Créer" et renseigner les informations (nom, secteur, contact, etc.).
 
-- `security/`
-  - `ir.model.access.csv` : Règles d'accès par modèle
+### Créer un stage
+1. Aller dans le menu "Stages".
+2. Cliquer sur "Créer".
+3. Sélectionner l'étudiant, l'entreprise, les tuteurs, saisir le sujet, les dates, etc.
+4. Générer la convention PDF et la faire signer.
 
-- `data/`
-  - `email_templates.xml` : Modèles d'emails (envoi de convention, notifications)
+### Gérer les candidatures
+1. Aller dans le menu "Candidatures".
+2. Cliquer sur "Créer" pour enregistrer une nouvelle candidature à un stage.
+3. Répondre aux questions personnalisées si besoin.
+4. Suivre le statut de la candidature.
 
-- `demo/`
-  - `demo_data.xml` : Données de démonstration (étudiants, entreprises, stages, etc.)
+### Gérer les rapports de stage
+1. Aller dans le menu "Rapports".
+2. Cliquer sur "Créer" pour déposer un rapport.
+3. Lancer l'analyse OCR pour extraire le texte et vérifier les sections obligatoires.
+4. Le tuteur peut valider ou rejeter le rapport et laisser un feedback.
 
-- `static/`
-  - `description/` : Images, icônes, logo
-  - `src/` : JS/CSS pour dashboard, templates QWeb
+### Utiliser le dashboard
+1. Aller dans le menu "Dashboard".
+2. Visualiser les indicateurs, graphiques, évolutions et analyses croisées.
+3. Utiliser les filtres pour affiner l'analyse (statut, entreprise, filière, période).
 
-- `install.py` : Script d'installation (optionnel)
+## Structure des fichiers
 
-## Points techniques et originaux
+- `models/` : tous les modèles Python (étudiant, entreprise, stage, candidature, rapport, section, question, réponse, utilitaires SMS)
+- `views/` : vues Odoo (formulaires, listes, kanban, dashboard, menus)
+- `report/` : templates QWeb pour PDF (convention)
+- `security/` : droits d'accès
+- `data/` : templates d'emails
+- `demo/` : données de démonstration
+- `static/` : images, JS, CSS pour dashboard
 
-- Extraction OCR automatique du texte des rapports et CV (PDF/Image)
-- Vérification automatique des sections obligatoires dans les rapports
+## Points techniques avancés
+- Extraction OCR automatique (PyPDF2, pytesseract, pdf2image)
+- Génération de PDF dynamique (QWeb)
 - Dashboard analytique interactif (KPIs, graphiques, pivot)
-- Notifications SMS (Twilio) et emails automatisés
-- Signature électronique intégrée
-- Système de questions/réponses personnalisées pour les candidatures
-- Respect de l'architecture MVC Odoo, code commenté et structuré
-
-## Contraintes respectées
-- Compatible Odoo 16/17 Community
-- 100% Python, pas de dépendances commerciales
-- Sécurité et droits d'accès gérés
-- Documentation et code conformes aux standards Odoo
+- Notifications SMS (Twilio) et emails
+- Signature électronique
+- Architecture MVC Odoo, code commenté et structuré
 
 ## Pour aller plus loin
-- Possibilité d'ajouter des workflows de validation avancés
-- Intégration avec d'autres modules Odoo (RH, CRM, etc.)
+- Workflows de validation avancés
+- Intégration RH/CRM
 - Export/Import de données
 
-## Présentation vidéo
+## Vidéo de démonstration
 
 👉 [Lien à insérer ici pour la vidéo de démonstration]
 
-## Auteurs
+## Auteur
 - Bechir Ben Tekfa
 
 ---
 
-> Ce module a été développé dans le cadre d'un TP d'amélioration de la gestion des stages académiques. Il va au-delà des exigences de base en proposant des fonctionnalités avancées et une expérience utilisateur moderne.
+> Ce module va au-delà d'une simple gestion de stages : il propose une expérience complète, automatisée et analytique pour tous les acteurs du suivi académique.
