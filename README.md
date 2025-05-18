@@ -175,7 +175,10 @@ def install():
 
 
 ## Vidéo de démonstration
-👉 [Lien à insérer ici pour la vidéo de démonstration]
+
+
+https://github.com/user-attachments/assets/2bc714c0-7f4e-44d7-b0a6-fd534e0faf65
+
 
 ## Auteur
 - Bechir Ben Tekfa
